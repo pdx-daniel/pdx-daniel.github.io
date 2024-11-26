@@ -1,6 +1,17 @@
 import Link from "next/link";
 
+/**
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * REMEMBER TO UPDATE THE LAST_UPDATED TIMESTAMP!
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
 
+/**
+ * Now page component that displays current activities and focus areas.
+ * Shows a list of current projects/activities and when the page was last updated.
+ * The last updated timestamp is either the actual last update time if recent,
+ * or a deterministic random time on the previous Sunday.
+ **/
 export default function Now() {
   return (
     <div>
@@ -20,9 +31,14 @@ export default function Now() {
   );
 }
 
-
-
-const LAST_UPDATED = "2024-11-25T20:49:43-08:00"; // Static date string
+/**
+ * REMEMBER: UPDATE THIS!
+ * 
+ * ISO 8601 timestamp string representing when the Now page content was last manually updated.
+ * Used by getLastUpdated() to determine whether to show the actual update time
+ * or generate a deterministic random time.
+ */
+const LAST_UPDATED = "2024-11-25T20:49:43-08:00";
 
 /**
  * Returns a date indicating when the "Now" page content was last updated.
