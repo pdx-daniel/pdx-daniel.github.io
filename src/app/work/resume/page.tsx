@@ -3,6 +3,9 @@ import { experiences } from '@/data/experience';
 import Link from 'next/link';
 import styles from './page.module.css';
 
+/**
+ * Resume page component that displays professional experience in a resume format.
+ */
 export default function Resume() {
   return (
     <div className={styles.main}>

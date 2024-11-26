@@ -6,6 +6,9 @@ export const metadata = {
   description: 'View my professional experience and work history'
 }
 
+/**
+ * Work page component that displays professional experience in a narrative format.
+ */
 export default function Work() {
   return (
     <main
