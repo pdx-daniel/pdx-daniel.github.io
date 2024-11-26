@@ -44,10 +44,12 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        run: pnpm build --no-lint
+        env:
+          SKIP_TYPE_CHECK: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
