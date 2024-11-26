@@ -1,6 +1,6 @@
 :root {
-  --font-mono: var(--font-jetbrains-mono);
-  --font-family: var(--font-jetbrains-mono);
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --font-family: var(--font-jetbrains-mono), ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
   --line-height: 1.20rem;
   --border-thickness: 2px;
   --text-color: #000;
