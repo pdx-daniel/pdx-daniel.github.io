@@ -1,8 +1,6 @@
-@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
-
 :root {
-  --font-mono: "JetBrains Mono", monospace;
-  --font-family: "JetBrains Mono", monospace;
+  --font-mono: var(--font-jetbrains-mono);
+  --font-family: var(--font-jetbrains-mono);
   --line-height: 1.20rem;
   --border-thickness: 2px;
   --text-color: #000;
