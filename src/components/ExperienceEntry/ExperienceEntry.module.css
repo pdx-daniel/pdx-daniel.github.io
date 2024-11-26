@@ -1,0 +1,43 @@
+.article {
+  margin-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-name {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.employment-period {
+  color: var(--secondary-text);
+  font-size: 0.9em;
+}
+
+.location {
+  color: var(--secondary-text);
+  font-size: 0.9em;
+}
+
+.responsibilities {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--text-color);
+}
+
+.responsibility {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.responsibility abbr {
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+} 

@@ -1,0 +1,39 @@
+.headline {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  min-height: 5rem;
+  align-items: center;
+  position: relative;
+}
+
+.word {
+  display: inline-block;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.exitOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0.8));
+  pointer-events: none;
+}
+
+.counterWrapper {
+  display: inline-flex;
+  gap: 0.1em;
+  margin-left: 0.3em;
+} 

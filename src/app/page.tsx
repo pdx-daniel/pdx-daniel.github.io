@@ -1,75 +1,77 @@
-import Image from 'next/image';
+'use client';
 
+import { motion } from 'motion/react';
+import Link from 'next/link';
 import styles from './page.module.css';
+
+const MotionLink = motion(Link);
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.04, 0.62, 0.23, 0.98]
+    }
+  }
+};
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a href="https://vercel.com?utm_source=typescript-nextjs-starter" target="_blank" rel="noopener noreferrer">
-            By{' '}
-            <Image src="/vercel.svg" alt="Vercel Logo" className={styles.vercelLogo} width={100} height={24} priority />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=typescript-nextjs-starter"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className={styles.hero}>
+        <motion.div
+          className={styles.heroContent}
+          variants={container}
+          initial="hidden"
+          animate="show"
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <motion.p className={styles.description} variants={item}>
+            👋 Hi. I'm Daniel.
+          </motion.p>
+          <motion.p className={styles.description} variants={item}>
+            I'm a senior technology leader focused on frontend engineering and building high-performing teams. I've worked with Appfigures, stealth clients, county governments, elected officials and others to deliver meaningful, impactful improvements.
+          </motion.p>
+          <motion.p className={styles.description} variants={item}>
+            When I'm not leading engineering teams, you'll find me tinkering with DIY projects, making music, spending time with family, volunteering in my community, or trying to keep up with the latest in AI.
+          </motion.p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=typescript-nextjs-starter"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=typescript-nextjs-starter"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=typescript-nextjs-starter"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>Instantly deploy your Next.js site to a shareable URL with Vercel.</p>
-        </a>
+          <motion.div
+            className={styles.actions}
+            variants={item}
+          >
+            <MotionLink
+              href="/work"
+              className={styles.actionButton}
+              whileHover={{ scale: 1.05, backgroundColor: '#fff', color: '#000' }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              My Work
+            </MotionLink>
+            <MotionLink
+              href="/now"
+              className={styles.actionButton}
+              whileHover={{ scale: 1.05, backgroundColor: '#fff', color: '#000' }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              What I'm Up To
+            </MotionLink>
+          </motion.div>
+        </motion.div>
       </div>
     </main>
   );

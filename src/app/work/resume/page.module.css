@@ -1,0 +1,26 @@
+.main {
+  margin: 0 auto;
+}
+
+.narrativeLink {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.narrativeLink:hover {
+  text-decoration: underline;
+}
+
+.main h2 {
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-emphasis);
+}
+
+.main p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+} 

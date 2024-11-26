@@ -1,0 +1,47 @@
+.main {
+  margin: 0 auto;
+}
+
+.narratives {
+  margin: 2rem 0;
+}
+
+.narrative {
+  margin: 2rem 0;
+}
+
+.narrativeTitle {
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-emphasis);
+}
+
+.dateRange {
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+.narrative p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.narrative p:last-child {
+  margin-bottom: 0;
+}
+
+.details {
+  margin-top: 4rem;
+}
+
+.resumeLink {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.resumeLink:hover {
+  text-decoration: underline;
+} 

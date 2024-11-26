@@ -1,0 +1,62 @@
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.titleLink:hover {
+  cursor: pointer;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+  color: red;
+}
+
+.header {
+  margin-bottom: calc(var(--line-height) * 2);
+  border-collapse: collapse;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header tr td:last-child {
+  text-align: right;
+}
+
+.widthAuto {
+  width: auto;
+}
+
+.title {
+  line-height: normal;
+  margin-bottom: unset;
+  margin: 0;
+}
+
+.navCell {
+  padding: calc((var(--line-height) / 2)) 0.5ch !important;
+  width: 1%;  /* This makes the cell as narrow as possible while containing its content */
+  white-space: nowrap;
+  vertical-align: middle;
+  height: calc(var(--line-height) * 1.5);
+}
+
+.navCell :global(.iconLink) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.navLink {
+  display: block;
+  text-decoration: none;
+} 
